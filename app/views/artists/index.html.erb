@@ -1,5 +1,7 @@
-<h1>  The Artists on Billboard <%=@billboard.name %> </h1>
+<h1 class="ui red header"> The Artists on Billboard <%=@billboard.name %> </h1>
+<h3 class="ui header">
 <%= link_to 'Enter a New Artist', new_billboard_artist_path(@billboard) %>
+</h3>
 <div class="ui ordered list">
   <% @artists.each do |artist| %>
     <div class="item"> 

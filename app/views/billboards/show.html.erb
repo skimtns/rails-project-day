@@ -1,10 +1,10 @@
 <h1><%=@billboard.name%></h1>
 
-<div class="ui grid">
-<div class="ui ordered list">
+<div class="ui bulleted list">
 <h3 class="ui header">
 <%= link_to 'View Artists', billboard_artists_path(@billboard)%>
+</h3>
+<h3 class="ui header">
 <%= link_to 'View Songs', billboard_songs_path(@billboard)%>
 </h3>
-</div>
 </div>
