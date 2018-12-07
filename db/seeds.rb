@@ -5,7 +5,7 @@
 # 10.times do
     Song.create(
       name: Faker::Music.album,
-      rank: rand(10),
+      rank: rand(1..10),
       artist_id: artist.id,
       billboard_id: 1
     )
@@ -19,7 +19,7 @@ end
 # 50.times do
     Song.create(
       name: Faker::Music.album,
-      rank: rand(50),
+      rank: rand(1..50),
       artist_id: artist.id,
       billboard_id: 2
     )
