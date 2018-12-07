@@ -1,10 +1,14 @@
 <h1>  The Songs on Billboard <%=@billboard.name %> </h1>
 <div class="ui bulleted list">
+<ul>
   <% @songs.each do |song| %>
     <div class="item"> 
     <h4 class="ui header">
-    <%= link_to song.name, song%>
+    <li>
+     <%= song.rank %> <%= song.name %>
+     </li>
     </h4>
     </div>
   <% end %>
+  </ul>
 </div>

@@ -4,7 +4,7 @@ class SongsController < ApplicationController
   before_action :set_song, only: [:show, :destroy]
 
   def index
-    @songs = @billboard.songs
+    @songs = @billboard.songs.by_rank
   end
   # get
   def new

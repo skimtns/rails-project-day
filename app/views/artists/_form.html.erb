@@ -1,0 +1,16 @@
+<%= @artist.id ? "Edit Artist" : "Create Artist" %>
+   <%= form_for [@billboard, @artist] do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name, required: true %>
+
+   <hr />
+   <%= fields_for @song do |u| %>
+   <%= u.label :title %>
+   <%= u.text_field :name %>
+   <%= u.label :rank %>
+   <%= u.number_field :rank %>
+   <%= u.label :genre %>
+   <%= u.select :genre, [ 'Ballad', 'Pop', 'Rock', 'Hip-Hop', 'Classic', 'Internation', 'Other' ], :prompt => 'Select One' %>
+   <% end %>
+   <%= f.submit "Submit" %>
+<% end %>

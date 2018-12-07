@@ -11,13 +11,13 @@ class ArtistsController < ApplicationController
 
   def new
     @artist = @billboard.artists.new
-    # render partial: "form"
+    render partial: "form"
   end
 
   def create
     @artist = @billboard.artists.create(artist_params)
     if @artist.save
-      redirect_to @artists
+      redirect_to billboard_artists_path
     else
       render :new 
     end 
@@ -25,7 +25,7 @@ class ArtistsController < ApplicationController
   end 
 
   def edit
-    # render partial: "form"
+    render partial: "form"
   end
 
   def update
